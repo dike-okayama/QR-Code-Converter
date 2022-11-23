@@ -1,0 +1,144 @@
+/* @import "./base.css"; */
+
+body {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #313131;
+}
+
+.header-border {
+    border: 1px dashed #cccccc;
+}
+
+.header-logo {
+    color: #ca3e47;
+    font-size: 4rem;
+}
+
+.main-container {
+    display: flex;
+    height: 15rem;
+}
+
+.subtitle {
+    color: #ca3e47;
+    font-size: 2rem;
+}
+.qrcode-converter-box {
+    text-align: center;
+    line-height: 10rem;
+    background-color: #ca3e47;
+    width: 30%;
+    margin: 1rem 10% 2rem 10%;
+}
+
+.url-converter-box {
+    text-align: center;
+    line-height: 10rem;
+    background-color: #ca3e47;
+    width: 30%;
+    margin: 1rem 10% 2rem 10%;
+}
+
+.input-box {
+    color: #757575;
+    font-size: large;
+    font-weight: 600;
+    height: 3rem;
+    width: 49%;
+    border: dotted;
+    background-color: transparent;
+    text-align: center;
+}
+.input-box:focus {
+    font-size: large;
+}
+
+.input-button {
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    background-color: #ca3e47;
+    height: 2rem;
+    width: 50%;
+}
+.input-button:hover {
+    transition: 250ms;
+    background-color: #525252;
+}
+
+.qrcode-to-url-input {
+    color: #757575;
+    font-size: large;
+    font-weight: 600;
+    height: 200px;
+    width: 200px;
+    border: dotted;
+    background-color: transparent;
+    text-align: center;
+}
+
+.enter {
+    color: #ca3e47;
+}
+
+.qrcode-result {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.url-result {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.url-result a {
+    text-decoration: underline;
+    font-size: 2rem;
+    color: whitesmoke;
+}
+
+.footer-border {
+    border: 1px dashed #cccccc;
+}
+.separator {
+    border: 1px dashed #cccccc;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+}
+
+/* #app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-weight: normal;
+}
+
+a,
+.green {
+    text-decoration: none;
+    color: hsla(160, 100%, 37%, 1);
+    transition: 0.4s;
+}
+
+@media (hover: hover) {
+    a:hover {
+        background-color: hsla(160, 100%, 37%, 0.2);
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        place-items: center;
+    }
+
+    #app {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 2rem;
+    }
+} */
