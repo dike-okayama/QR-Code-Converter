@@ -61,6 +61,7 @@ export default {
 <template>
     <body>
         <header class="header-logo">QR-Code Converter</header>
+        <img src="./assets/favicon.png" />
         <hr class="header-border" />
         <main>
             <!-- <div class="main-container">
