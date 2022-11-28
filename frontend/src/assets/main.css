@@ -40,6 +40,13 @@ body {
     margin: 1rem 10% 2rem 10%;
 }
 
+input:focus {
+    outline: none;
+}
+input:focus::placeholder {
+    color: transparent;
+}
+
 .input-box {
     color: #757575;
     font-size: large;
@@ -73,15 +80,20 @@ body {
     font-weight: 600;
     height: 200px;
     width: 200px;
-    border: dotted;
+    border: 5px dotted;
     background-color: transparent;
     text-align: center;
 }
 
 .enter {
     color: #ca3e47;
+    transform: scale(1.1);
 }
 
+.default-qrcode {
+    height: 200px;
+    width: 200px;
+}
 .qrcode-result {
     display: flex;
     justify-content: flex-end;
@@ -95,7 +107,8 @@ body {
 .url-result a {
     text-decoration: underline;
     font-size: 2rem;
-    color: whitesmoke;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-border {

@@ -1,6 +1,6 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
+// import TheWelcome from "./components/TheWelcome.vue";
 </script>
 
 <script>
@@ -16,23 +16,16 @@ export default {
         };
     },
     methods: {
-        not_implemented(text) {
-            alert(text);
-        },
         async fetchQR(url) {
             this.qrCode = null;
             const res = await fetch(
                 `http://127.0.0.1:5000/url-to-qrcode?url=${url}`,
                 {
                     method: "GET",
-                    // mode: 'no-cors' はエラーが出る
                 }
             );
             const jsonRes = await res.json();
             this.qrCode = "data:image/png;base64," + jsonRes.qrcode;
-            // const binary = jsonRes.qrcode;
-            // const blob = new Blob([binary]);
-            // this.qrCode = window.URL.createObjectURL(blob);
         },
         async fetchURL(qrCode) {
             const res = await fetch(
@@ -106,7 +99,12 @@ export default {
                     @drop.prevent="dropFile"
                     :class="{ enter: isEnter }"
                 >
-                    <p v-if="!inputQR">Upload your QR-Code</p>
+                    <img
+                        v-if="!inputQR"
+                        alt="Upload your QR-Code"
+                        src="./assets/qrcode.svg"
+                        class="default-qrcode"
+                    />
                     <img
                         v-if="inputQR"
                         :src="inputQR"
@@ -123,9 +121,7 @@ export default {
         </main>
         <hr class="footer-border" />
         <footer>
-            <a href="https:uoh-dakken.com" class="footer-link"
-                >データ分析研究会</a
-            >
+            <!-- <a href="https:uoh-dakken.com" class="footer-link">データ分析研究会</a> -->
         </footer>
     </body>
 </template>
